@@ -1,5 +1,5 @@
 # flask_starter_project
-A flask starter project with user login, registration, administration, and Bootstrap -- featuring PeeWee
+A flask starter project with user login, registration, administration, and Bootstrap -- featuring PeeWee ORM.
 
 Currently compatible with Python 2.7.9 and higher.
 
