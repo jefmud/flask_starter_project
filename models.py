@@ -68,13 +68,19 @@ def create_superuser():
     """console method to create an admin/superuser"""
     # not if using python3, change raw_input and print statements!
     # if you're reading this code, you already understand this.
-    print "Enter data for admin/superuser (all fields required)"
-    username = raw_input("Enter username: ")
-    email = raw_input("Enter email: ")
-    password = raw_input("Enter password: ")
+    print ("Enter data for admin/superuser (all fields required)")
+    if '2.7' in sys.version:
+        username = raw_input("Enter username: ")
+        email = raw_input("Enter email: ")
+        password = raw_input("Enter password: ")
+    else:
+        username = input("Enter username: ")
+        email = input("Enter email: ")
+        password = input("Enter password: ")    
+        
     try:
         User.create_user(username=username, email=email, password=password, is_admin=True)
     except Exception as e:
-        print e
-        print "database probably needs to be created, please use --initdatabase command line switch"
+        print (e)
+        print ("database probably needs to be created, please use --initdatabase command line switch")
 

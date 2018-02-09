@@ -142,15 +142,18 @@ def about():
 if __name__ == '__main__':
     if '--createsuperuser' in sys.argv:
         models.create_superuser()
-        print "** superuser created **"
+        print("** superuser created **")
     elif '--initdatabase' in sys.argv:
         models.initialize_database()
-        print "** database initialized **"
+        print("** database initialized **")
     elif '--runserver' in sys.argv:
         # see settings at the top of the file
         app.run(host=HOST, port=PORT, debug=DEBUG)
     else:
-        print "app.py valid command line options"
-        print " --createsuperuser (allows creation of an administrative user)"
-        print "--initdatabase (initializes the database if required)"
-        print "--runserver (runs the server on port configured in source code)"
+        msg = """
+        app.py valid command line options
+        --createsuperuser (allows creation of an administrative user)
+        --initdatabase (initializes the database if required)
+        --runserver (runs the server on port configured in source code)
+        """
+        print(msg)
