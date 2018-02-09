@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% from "_macros.html" import render_navigation, render_messages %}
+{% block title %}This is an example page{% endblock %}
+
+{% block navbar %}
+{{ render_navigation(current_user) }}
+{% endblock %}
+
+{% block content %}
+<div class="container theme-showcase" role="main" style="margin-top:60px;">
+  {{ render_messages(messages) }}
+  <h1>Hello, it's Flask.</h1>
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu interdum tortor.
+  Nulla maximus metus felis.Cras porta, nibh a tincidunt facilisis, massa nisi finibus purus,
+  ac eleifend arcu justo ac metus. Curabitur auctor in nunc sit amet dictum.
+  Maecenas maximus auctor laoreet. Nullam varius tellus sed sodales commodo.
+  Donec velit lectus, porta in dictum eu, pharetra eu lorem. Phasellus pellentesque
+  ornare lectus, eget auctor elit lacinia vel. Vivamus at dolor venenatis, pellentesque
+  nisi a, viverra ipsum. Suspendisse tempus magna vel maximus viverra. Fusce quis justo ex.
+  Vestibulum dapibus placerat felis, vitae mollis mi tristique id.
+  </p>
+</div>
+{% endblock %}
