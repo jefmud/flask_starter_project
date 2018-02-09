@@ -1,5 +1,7 @@
 # flask_starter_project
-A flask starter project with user login, registration, administration, and Bootstrap (compatible with Python 2.7.9 and higher).
+A flask starter project with user login, registration, administration, and Bootstrap -- featuring PeeWee
+
+Currently compatible with Python 2.7.9 and higher.
 
 NOT CURRENTLY COMPATIBLE WITH Python 3.x (something with Flask-wtf and WTF-peewee)
 
