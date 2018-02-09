@@ -1,16 +1,17 @@
 # flask_starter_project
-A flask starter project with user login and registration (compatible with Python 2.7.9 and higher)
+A flask starter project with user login, registration, administration, and Bootstrap (compatible with Python 2.7.9 and higher)
 
 Requirements (and dependencies)
 
 The major libraries are:
 1. Flask
-2. Flask-admin
-3. Flask-login
-4. Flask-bcrypt
-5. Flask-wtf
-6. Peewee
-7. wtf-peewee
+2. WTForms
+3. Flask-admin
+4. Flask-login
+5. Flask-bcrypt
+6. Flask-wtf
+7. Peewee
+8. wtf-peewee
 
 pip freeze
 bcrypt==3.1.4
