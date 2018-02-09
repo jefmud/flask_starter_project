@@ -5,7 +5,7 @@ Currently compatible with Python 2.7.9 and higher.
 
 NOT CURRENTLY COMPATIBLE WITH Python 3.x (something with Flask-wtf and WTF-peewee)
 
-Be careful with library versions because they can get freaked out.  Play it safe and use virtualenv.
+Be careful with library versions because they can get freaked out if dependencies aren't.  Play it safe and use virtualenv.
 
 I reported some issues to Charles Leifer about Peewee (3.0) and Flask-Admin, so you may notice I am using his
 earlier version of the library for now.
