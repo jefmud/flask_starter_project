@@ -1,5 +1,10 @@
 # flask_starter_project
-A flask starter project with user login, registration, administration, and Bootstrap (compatible with Python 2.7.9 and higher)
+A flask starter project with user login, registration, administration, and Bootstrap (compatible with Python 2.7.9 and higher).
+
+Be careful with library versions because they can get freaked out.  Play it safe and use virtualenv.
+
+I reported some issues to Charles Leifer about Peewee (3.0) and Flask-Admin, so you may notice I am using his
+earlier version of the library for now.
 
 Requirements (and dependencies)
 
