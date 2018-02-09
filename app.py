@@ -89,7 +89,7 @@ def login():
             user = models.User.get(models.User.username==username)
             if user.authenticate(password):
                 login_user(user)
-                flash('Welcome {}'.format(user), category='success')
+                flash('Welcome {}!'.format(user), category='success')
                 return redirect(url_for('index'))
         except Exception as e:
             print(e)
@@ -103,7 +103,7 @@ def login():
 def logout():
     """logout the user"""
     logout_user()
-    flash("You have been logged out.", category="success")
+    flash("You have been logged out.", category="warning")
     return redirect(url_for('index'))
 
 @app.route('/register', methods=['GET','POST'])
@@ -115,12 +115,19 @@ def register():
     form = forms.RegisterForm()
     if form.validate_on_submit():
         try:
-            models.User.create_user(email=form.email.data, password=form.password.data)
+            models.User.create_user(
+                username=form.username.data,
+                email=form.email.data,
+                password=form.password.data,
+                firstname=form.firstname.data,
+                lastname=form.lastname.data,
+                is_admin=False
+            )
         except:
             flash("Problems registering this user = {}".format(form.email.data),
                   category='danger')
         else:
-            flash("You have been registered as {}".format(form.email.data))
+            flash("Thanks for registering as {}".format(form.email.data), category="info")
             return redirect(url_for('index'))
 
     return render_template('register.html', form=form)
