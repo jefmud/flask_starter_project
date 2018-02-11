@@ -22,7 +22,9 @@ The major libraries are:
 7. Peewee
 8. wtf-peewee
 
+```
 pip freeze
+
 bcrypt==3.1.4
 cffi==1.11.4
 click==6.7
@@ -43,3 +45,4 @@ visitor==0.1.3
 Werkzeug==0.14.1
 wtf-peewee==0.2.6
 WTForms==2.1
+```
